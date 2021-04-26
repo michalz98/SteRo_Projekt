@@ -128,4 +128,33 @@ void Obraz::rysujProstokat(int x1, int y1, int x2, int y2, bool wypel)
         p[x2][i]=1;
     }
 }
+void Obraz::rysujOkrag(int x, int y, int r)
+{
+    int d = 1 - r;
+    int x_t, y_t;
+    x_t = 0;
+    y_t = r;
 
+    for(int i = 1; x_t < y_t; i++)
+    {
+        if(d < 0)
+        {
+            x_t++;
+            d += 2*x_t+3;
+        }
+        else
+        {
+            x_t++;
+            y_t--;
+            d +=  2*(x_t - y_t)+5;
+        }
+        p[x_t+x][y_t+y] = 1;
+        p[x_t+x][-y_t+y] = 1;
+        p[-x_t+x][y_t+y] = 1;
+        p[-x_t+x][-y_t+y] = 1;
+        p[y_t+x][x_t+y] = 1;
+        p[y_t+x][-x_t+y] = 1;
+        p[-y_t+x][x_t+y] = 1;
+        p[-y_t+x][-x_t+y] = 1;
+    }
+}
