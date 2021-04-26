@@ -10,10 +10,12 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    obraz.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    obraz.h
 
 FORMS += \
     mainwindow.ui
