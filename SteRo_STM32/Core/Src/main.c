@@ -33,9 +33,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stm32f4xx_hal_ltdc.h"
-#include "stm32f429i_discovery_lcd.h"
-#include "stm32f429i_discovery_sdram.h"
-#include "stm32f429i_discovery.h"
+//#include "stm32f429i_discovery_lcd.h"
+//#include "stm32f429i_discovery_sdram.h"
+//#include "stm32f429i_discovery.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -67,13 +67,13 @@ DMA_HandleTypeDef hdma_memtomem_dma2_stream0;
 void SystemClock_Config(void);
 void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
-static void MX_DMA_Init(void);
-static void MX_GPIO_Init(void);
-static void MX_DMA2D_Init(void);
-static void MX_FMC_Init(void);
-static void MX_I2C3_Init(void);
-static void MX_LTDC_Init(void);
-static void MX_SPI5_Init(void);
+void MX_DMA_Init(void);
+void MX_GPIO_Init(void);
+void MX_DMA2D_Init(void);
+void MX_FMC_Init(void);
+void MX_I2C3_Init(void);
+void MX_LTDC_Init(void);
+void MX_SPI5_Init(void);
 
 /* USER CODE END PFP */
 
