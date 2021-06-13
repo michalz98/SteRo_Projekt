@@ -15,6 +15,7 @@ bool Stage::clear(){
 			p[i][j] = 0;
 		}
 	}
+	commsclear();
 }
 
 void Stage::comms()
@@ -25,9 +26,14 @@ void Stage::comms()
 		{
 			if(p[i][j])
 			{
-				printf();
+				printf("p %d %d\r\n", i, j);
 			}
 		}
 	}
 	printf("k\r\n");
+}
+
+void Stage::commsclear()
+{
+	printf("c\r\n");
 }

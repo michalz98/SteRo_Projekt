@@ -70,13 +70,17 @@ void MainWindow::czytajDane()
         case 'p':
             plik>>x;
             plik>>y;
+			/*
             plik>>r;
             plik>>g;
-            plik>>b;
+            plik>>b;*/
             obrazek.p[x][y]=true;
-            obrazek.c[x][y].red=r;
+            /*obrazek.c[x][y].red=r;
             obrazek.c[x][y].green=g;
-            obrazek.c[x][y].blue=b;
+            obrazek.c[x][y].blue=b;*/
+			obrazek.c[0][0].red=0;
+            obrazek.c[0][0].green=0;
+            obrazek.c[0][0].blue=0;
             ostatnioCzytana++;
             break;
         case 'k':
