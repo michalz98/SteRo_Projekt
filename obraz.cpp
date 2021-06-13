@@ -3,14 +3,22 @@
 Obraz::Obraz()
 {
     p=new bool*[240];
+    c=new color*[240];
     for(int i=0; i<240; i++)
     {
         p[i]=new bool[320];
+        c[i]=new color[320];
     }
 
     for(int i=0; i<240; i++)
         for(int j=0; j<320; j++)
+        {
             p[i][j]=0;
+            c[i][j].red=0;
+            c[i][j].green=0;
+            c[i][j].blue=0;
+        }
+    doWyczyszczenia=false;
 }
 
 Obraz::~Obraz()
@@ -18,8 +26,10 @@ Obraz::~Obraz()
     for(int i=0; i<240; i++)
     {
         delete[](p[i]);
+        delete[](c[i]);
     }
     delete[](p);
+    delete[](c);
 }
 
 
@@ -27,6 +37,17 @@ Obraz::~Obraz()
 void Obraz::dodajPiksel(int x, int  y)
 {
     p[x][y]=1;
+    c[x][y].red=0;
+    c[x][y].green=0;
+    c[x][y].blue=0;
+}
+
+void Obraz::dodajPiksel(int x, int  y, int r, int g, int b)
+{
+    p[x][y]=1;
+    c[x][y].red=r;
+    c[x][y].green=g;
+    c[x][y].blue=b;
 }
 
 
@@ -37,6 +58,9 @@ void Obraz::wyczysc()
         for(int j=0; j<320; j++)
         {
             p[i][j]=0;
+            c[i][j].red=0;
+            c[i][j].green=0;
+            c[i][j].blue=0;
         }
     }
 }

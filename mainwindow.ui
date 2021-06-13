@@ -10,19 +10,19 @@
     <x>0</x>
     <y>0</y>
     <width>240</width>
-    <height>380</height>
+    <height>320</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>240</width>
-    <height>380</height>
+    <height>320</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>240</width>
-    <height>380</height>
+    <height>320</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -55,19 +55,6 @@
     </property>
     <property name="transformationAnchor">
      <enum>QGraphicsView::AnchorViewCenter</enum>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>320</y>
-      <width>240</width>
-      <height>60</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Zmien animacje</string>
     </property>
    </widget>
   </widget>
