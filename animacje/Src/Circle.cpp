@@ -4,7 +4,7 @@
  *  Created on: May 24, 2021
  *      Author: michal
  */
-#include <Circle.hh>
+#include <Circle.h>
 
 Circle::Circle(int r)
 {

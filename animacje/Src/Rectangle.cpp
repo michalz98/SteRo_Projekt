@@ -5,7 +5,7 @@
  *      Author: michal
  */
 
-#include "Rectangle.hh"
+#include <Rectangle.h>
 
 Rectangle::Rectangle(int w, int l)
 {

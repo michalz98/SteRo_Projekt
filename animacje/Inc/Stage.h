@@ -6,11 +6,8 @@
 class Stage{
 public:
 	bool p[240][320];
-	
-	void comms(); //przekazywanie informacji przez UARTA
 private:
 	bool clear();
-	void commsclear(); //czyszczenie obrazka (UART)
 };
 
 Stage *stage;

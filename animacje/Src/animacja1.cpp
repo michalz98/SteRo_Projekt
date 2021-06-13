@@ -5,11 +5,11 @@
  *      Author: michal
  */
 
+#include <animacja1.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-#import "animacja1.hh"
 
 void  figFall(int step)
 {
