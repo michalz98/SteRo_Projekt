@@ -6,6 +6,10 @@
 #include <QtCore>
 #include <QtGui>
 #include "Obraz.h"
+#include <QTimer>
+#include <fstream>
+
+using namespace std;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,14 +24,15 @@ public:
     ~MainWindow();
     void rysuj();
     void odswierz();
-private slots:
-    void on_pushButton_clicked();
-
+public slots:
+    void czytajDane();
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scena;
     QGraphicsRectItem* piksel;
     Obraz obrazek;
     QGraphicsView graphicsView;
+    QTimer* tim;
+    int ostatnioCzytana;
 };
 #endif // MAINWINDOW_H
