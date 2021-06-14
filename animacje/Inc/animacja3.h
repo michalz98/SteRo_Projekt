@@ -16,7 +16,7 @@
  * flag - do kontroli wywołania. 0 - pierwsze wywołanie animacji.
  */
 
-void ball(int step, bool flag);
+void ball(int step, bool flag, Stage* stage);
 
 
 

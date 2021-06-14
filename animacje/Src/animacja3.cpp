@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void ball(int step, bool flag)
+void ball(int step, bool flag, Stage* stage)
 {
 	if(!flag){
 		stgobj->ball = new Circle(stgobj->xb, stgobj->yb, stgobj->rb);
@@ -18,7 +18,7 @@ void ball(int step, bool flag)
 
 	flag = 1;
 
-	stgobj->ball->drawCircle(stgobj->xb, stgobj->yb);
+	stgobj->ball->drawCircle(stgobj->xb, stgobj->yb, stage);
 
 
 

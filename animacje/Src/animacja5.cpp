@@ -7,7 +7,7 @@
 
 #include "animacja5.h"
 
-void circles(int step)
+void circles(int step, Stage* stage)
 {
 	int x = 120, y= 160;
 
@@ -24,10 +24,10 @@ void circles(int step)
 		stgobj->rw4 == 1;
 	}
 
-	stgobj->wave1->drawCircle(x, y);
-	stgobj->wave2->drawCircle(x, y);
-	stgobj->wave3->drawCircle(x, y);
-	stgobj->wave4->drawCircle(x, y);
+	stgobj->wave1->drawCircle(x, y, stage);
+	stgobj->wave2->drawCircle(x, y, stage);
+	stgobj->wave3->drawCircle(x, y, stage);
+	stgobj->wave4->drawCircle(x, y, stage);
 
 
 	if( stgobj->rw1 != 0){
