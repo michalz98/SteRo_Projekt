@@ -8,11 +8,11 @@
 #ifndef INC_ANIMACJA1_H_
 #define INC_ANIMACJA1_H_
 
-#include <Circle.hh>
-#include <Rectangle.hh>
-#include <StageObj.hh>
+#include <Circle.h>
+#include <Rectangle.h>
+#include <StageObj.h>
 
-void  figFall(int step);
+void  figFall(int step, Stage* stage);
 
 
 

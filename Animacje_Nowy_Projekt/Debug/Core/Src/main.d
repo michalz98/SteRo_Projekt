@@ -32,6 +32,8 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../MBEDTLS/App/mbedtls.h ../MBEDTLS/App/mbedtls_config.h \
  ../Middlewares/Third_Party/mbedTLS/include/mbedtls/check_config.h \
@@ -39,10 +41,11 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  ../Core/Inc/stm32f429i_discovery.h \
  ../Core/Inc/stm32f429i_discovery_sdram.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/../../../Utilities/Fonts/fonts.h \
- ../Core/Inc/ili9341.h ../Core/Inc/lcd.h ../Core/Inc/animacja1.hh \
- ../Core/Inc/Circle.hh ../Core/Inc/Stage.hh \
- ../Core/Inc/stm32f429i_discovery_lcd.h ../Core/Inc/Rectangle.hh \
- ../Core/Inc/StageObj.hh ../Core/Inc/Circle.hh ../Core/Inc/Rectangle.hh
+ ../Core/Inc/ili9341.h ../Core/Inc/lcd.h ../Core/Inc/animacja1.h \
+ ../Core/Inc/Circle.h ../Core/Inc/Stage.h ../Core/Inc/Rectangle.h \
+ ../Core/Inc/StageObj.h ../Core/Inc/Circle.h ../Core/Inc/animacja2.h \
+ ../Core/Inc/Line.h ../Core/Inc/Stage.h ../Core/Inc/animacja3.h \
+ ../Core/Inc/StageObj.h ../Core/Inc/animacja4.h
 
 ../Core/Inc/main.h:
 
@@ -112,6 +115,10 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
 
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
+
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
+
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 
 ../MBEDTLS/App/mbedtls.h:
@@ -132,18 +139,26 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
 
 ../Core/Inc/lcd.h:
 
-../Core/Inc/animacja1.hh:
+../Core/Inc/animacja1.h:
 
-../Core/Inc/Circle.hh:
+../Core/Inc/Circle.h:
 
-../Core/Inc/Stage.hh:
+../Core/Inc/Stage.h:
 
-../Core/Inc/stm32f429i_discovery_lcd.h:
+../Core/Inc/Rectangle.h:
 
-../Core/Inc/Rectangle.hh:
+../Core/Inc/StageObj.h:
 
-../Core/Inc/StageObj.hh:
+../Core/Inc/Circle.h:
 
-../Core/Inc/Circle.hh:
+../Core/Inc/animacja2.h:
 
-../Core/Inc/Rectangle.hh:
+../Core/Inc/Line.h:
+
+../Core/Inc/Stage.h:
+
+../Core/Inc/animacja3.h:
+
+../Core/Inc/StageObj.h:
+
+../Core/Inc/animacja4.h:

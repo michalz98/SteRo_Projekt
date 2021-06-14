@@ -5,7 +5,7 @@
  *      Author: michal
  */
 
-#include <StageObj.hh>
+#include <StageObj.h>
 
 StageObj::StageObj()
 {
@@ -25,6 +25,12 @@ StageObj::StageObj()
 	this->w2 = 0;
 	this->l1 = 0;
 	this->l2 = 0;
+
+	this->rb = 25;
+	this->xb = 100;
+	this->yb = 100;
+	this->vxb = 1;
+	this->vyb = 1;
 
 	this->x_axis = {1,0};
 	this->y_axis = {0,1};

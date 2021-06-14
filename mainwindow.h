@@ -33,6 +33,6 @@ private:
     Obraz obrazek;
     QGraphicsView graphicsView;
     QTimer* tim;
-    int ostatnioCzytana;
+    int ostatnioCzytana=0;
 };
 #endif // MAINWINDOW_H

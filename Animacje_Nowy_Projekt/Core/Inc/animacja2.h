@@ -18,9 +18,10 @@
 
 struct text{
 	int x1, x2, x3, x4;
-}t;
+};
+static text t;
 
-void tekst(int y, bool state, Stage* stage);
+void tekst(int& y, bool state, Stage* stage);
 
 
 

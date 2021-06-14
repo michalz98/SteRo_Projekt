@@ -1,4 +1,2 @@
-Stage.cpp:13:6:void Stage::clear()	24	static
-Stage.cpp:22:6:void Stage::comms()	24	static
-Stage.cpp:37:6:void Stage::commsclear()	16	static
-Stage.cpp:42:6:void Stage::display()	24	static
+Stage.cpp:14:6:bool Stage::clear()	24	static
+Stage.cpp:23:6:void Stage::sendData()	24	static

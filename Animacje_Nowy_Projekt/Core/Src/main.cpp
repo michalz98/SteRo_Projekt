@@ -25,7 +25,11 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include "stm32f429i_discovery_lcd.h"
-#include "animacja1.hh"
+#include "animacja1.h"
+#include "animacja2.h"
+#include "animacja3.h"
+#include "animacja4.h"
+#include <cmath>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,6 +55,8 @@ LTDC_HandleTypeDef hltdc;
 
 SPI_HandleTypeDef hspi5;
 
+TIM_HandleTypeDef htim6;
+
 UART_HandleTypeDef huart1;
 
 SDRAM_HandleTypeDef hsdram1;
@@ -68,6 +74,7 @@ static void MX_DMA2D_Init(void);
 static void MX_I2C3_Init(void);
 static void MX_SPI5_Init(void);
 static void MX_FMC_Init(void);
+static void MX_TIM6_Init(void);
 /* USER CODE BEGIN PFP */
 
 
@@ -85,7 +92,7 @@ static void MX_FMC_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+	Stage* stage = new Stage;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -113,6 +120,7 @@ int main(void)
   MX_SPI5_Init();
   MX_MBEDTLS_Init();
   MX_FMC_Init();
+  MX_TIM6_Init();
 
   /* USER CODE BEGIN 2 */
   BSP_LCD_Init();
@@ -120,32 +128,51 @@ int main(void)
   BSP_LCD_SelectLayer(LCD_BACKGROUND_LAYER);
   BSP_LCD_DisplayOn();
   BSP_LCD_Clear(LCD_COLOR_BLACK);
+
+
+  int y=0;
+  bool state=1;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  stage->clear();
   while (1)
   {
-//	  figFall(i);
-//	  i++;
-	  printf("Test\r\n");
-
-//	  for(int i=100; i<150; i++)
-//		  for(int j=100;j<200;j++)
-//			  BSP_LCD_DrawPixel(i,j,1);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
-	  BSP_LCD_DisplayStringAtLine(1,(uint8_t*)"TEST LINE 1");
-	  BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
-	  BSP_LCD_DisplayStringAtLine(6,(uint8_t*)"TEST LINE 2");
-	  BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
-	  BSP_LCD_DisplayStringAtLine(3,(uint8_t*)"TEST LINE 3");
-	  BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
-	  BSP_LCD_DisplayStringAtLine(9,(uint8_t*)"TEST LINE 4");
-	  HAL_Delay(1000);
-	  BSP_LCD_Clear(LCD_COLOR_BLACK);
+	  //================fallFig==================
+	  stage->clear();
+  	  BSP_LCD_Clear(LCD_COLOR_BLACK);
+	  figFall(n,stage);
+	  n++;
+	  stage->sendData();
+	  //================hipocycloid==================
+//	  for(int i=0; i<10; i++)
+//	  {
+//		  hipocycloid(n,stage);
+//		  n++;
+//	  }
+//	  stage->sendData();
+//	  HAL_Delay(1000);
+
+	  //============TESKT===================
+
+//	  tekst(y,state,stage);
+//	  stage->sendData();
+//	  HAL_Delay(1);
+//	  if(y>310)
+//	  {
+//		  stage->clear();
+//		  BSP_LCD_Clear(LCD_COLOR_BLACK);
+////		  BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+////		  BSP_LCD_DrawRect(0,0,240,320);
+//	  }
+
+
+	  //============ball===================
+	  //ball()
   }
   /* USER CODE END 3 */
 }
@@ -408,6 +435,44 @@ static void MX_SPI5_Init(void)
   /* USER CODE BEGIN SPI5_Init 2 */
 
   /* USER CODE END SPI5_Init 2 */
+
+}
+
+/**
+  * @brief TIM6 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM6_Init(void)
+{
+
+  /* USER CODE BEGIN TIM6_Init 0 */
+
+  /* USER CODE END TIM6_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM6_Init 1 */
+
+  /* USER CODE END TIM6_Init 1 */
+  htim6.Instance = TIM6;
+  htim6.Init.Prescaler = 0;
+  htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim6.Init.Period = 65535;
+  htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim6, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM6_Init 2 */
+
+  /* USER CODE END TIM6_Init 2 */
 
 }
 

@@ -5,7 +5,7 @@
  *      Author: michal
  */
 
-#include "Rectangle.hh"
+#include <Rectangle.h>
 
 Rectangle::Rectangle(int w, int l)
 {
@@ -14,7 +14,7 @@ Rectangle::Rectangle(int w, int l)
 }
 
 
-void Rectangle::drawRec(int x, int y, bool wypel)
+void Rectangle::drawRec(int x, int y, bool wypel, Stage* stage)
 {
 	int x1 = x - this->width/2;
 	int x2 = x + this->width/2;
@@ -25,13 +25,13 @@ void Rectangle::drawRec(int x, int y, bool wypel)
     {
     	if(i > 0 && i < 240)
     	{
-			p[i][y1]=1;
-			p[i][y2]=1;
+			stage->p[i][y1]=1;
+			stage->p[i][y2]=1;
 			if(wypel)
 			{
 				for(int j=y1; j<=y2; j++)
 				{
-					p[i][j]=1;
+					stage->p[i][j]=1;
 				}
 			}
     	}
@@ -41,8 +41,8 @@ void Rectangle::drawRec(int x, int y, bool wypel)
     {
     	if(i > 0 && i < 320)
     	{
-			p[x1][i]=1;
-			p[x2][i]=1;
+    		stage->p[x1][i]=1;
+    		stage->p[x2][i]=1;
     	}
     }
 }

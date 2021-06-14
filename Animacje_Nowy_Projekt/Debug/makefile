@@ -63,8 +63,8 @@ Animacje_Nowy_Projekt.bin \
 all: Animacje_Nowy_Projekt.elf secondary-outputs
 
 # Tool invocations
-Animacje_Nowy_Projekt.elf: $(OBJS) $(USER_OBJS) D:\Studia\Cube\worksplace\Animacje_Nowy_Projekt\STM32F429ZITX_FLASH.ld
-	arm-none-eabi-g++ -o "Animacje_Nowy_Projekt.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Studia\Cube\worksplace\Animacje_Nowy_Projekt\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Animacje_Nowy_Projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Animacje_Nowy_Projekt.elf: $(OBJS) $(USER_OBJS) C:\Users\kapi2\Documents\SteRol_projekt\Animacje_Nowy_Projekt\STM32F429ZITX_FLASH.ld
+	arm-none-eabi-g++ -o "Animacje_Nowy_Projekt.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\kapi2\Documents\SteRol_projekt\Animacje_Nowy_Projekt\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Animacje_Nowy_Projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
