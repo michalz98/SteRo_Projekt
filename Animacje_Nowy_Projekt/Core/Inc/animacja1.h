@@ -12,7 +12,7 @@
 #include <Rectangle.h>
 #include <StageObj.h>
 
-void  figFall(int step, Stage* stage);
+void  figFall(int step, Stage* stage, StageObj* stgobj);
 
 
 
