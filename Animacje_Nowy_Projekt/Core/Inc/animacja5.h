@@ -11,7 +11,7 @@
 #include "Stage.h"
 #include "StageObj.h"
 
-void circles(int step, Stage* stage);
+void circles(int step, Stage* stage, StageObj* stgobj);
 
 
 
