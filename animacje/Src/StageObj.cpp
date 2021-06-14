@@ -35,6 +35,15 @@ StageObj::StageObj()
 	this->x_axis = {1,0};
 	this->y_axis = {0,1};
 
+	this->rw1 = 0;
+	this->rw2 = 0;
+	this->rw3 = 0;
+	this->rw4 = 0;
+
+	this->wave1 = new Circle(this->rw1);
+	this->wave2 = new Circle(this->rw2);
+	this->wave3 = new Circle(this->rw3);
+	this->wave4 = new Circle(this->rw4);
 }
 
 bool StageObj::initFig()
