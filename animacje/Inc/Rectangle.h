@@ -16,7 +16,7 @@ class Rectangle{
 	int length;
 private:
 	Rectangle(int w, int l);
-	void drawRec(int x, int y, bool wypel);
+	void drawRec(int x, int y, bool wypel, Stage* stage);
 };
 
 

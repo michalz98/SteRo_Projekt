@@ -5,10 +5,10 @@
 #include <StageObj.h>
 
 class Circle{
+public:
 	int r;
-private:
 	Circle(int r);
-	void drawCircle(int x, int y);
+	void drawCircle(int x, int y, Stage* stage);
 };
 
 #endif

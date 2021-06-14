@@ -11,7 +11,7 @@
 #include <time.h>
 
 
-void  figFall(int step)
+void  figFall(int step, Stage* stage)
 {
 	srand (time(NULL));
 
@@ -35,10 +35,10 @@ void  figFall(int step)
 
 	stgobj->initFig();
 
-	stgobj->cir1->drawCircle(stgobj->x1, stgobj->y1);
-	stgobj->cir2->drawCircle(stgobj->x2, stgobj->y2);
-	stgobj->rec1->drawRec(stgobj->x3, stgobj->y3, 0);
-	stgobj->rec2->drawRec(stgobj->x4, stgobj->y4, 0);
+	stgobj->cir1->drawCircle(stgobj->x1, stgobj->y1, stage);
+	stgobj->cir2->drawCircle(stgobj->x2, stgobj->y2, stage);
+	stgobj->rec1->drawRec(stgobj->x3, stgobj->y3, 0, stage);
+	stgobj->rec2->drawRec(stgobj->x4, stgobj->y4, 0, stage);
 
 	stgobj->y1 = stgobj->y1 + (step + 1);
 	stgobj->y2 = stgobj->y2 + (step);

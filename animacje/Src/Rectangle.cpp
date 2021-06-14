@@ -14,7 +14,7 @@ Rectangle::Rectangle(int w, int l)
 }
 
 
-void Rectangle::drawRec(int x, int y, bool wypel)
+void Rectangle::drawRec(int x, int y, bool wypel, Stage* stage)
 {
 	int x1 = x - this->width/2;
 	int x2 = x + this->width/2;

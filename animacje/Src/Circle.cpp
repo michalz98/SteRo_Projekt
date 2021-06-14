@@ -12,7 +12,7 @@ Circle::Circle(int r)
 }
 
 
-void Circle::drawCircle(int x, int y)
+void Circle::drawCircle(int x, int y, Stage* stage)
 {
     int d = 1 - this->r;
     int x_t, y_t;
