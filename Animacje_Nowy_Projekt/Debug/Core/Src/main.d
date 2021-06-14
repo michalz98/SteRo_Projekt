@@ -45,7 +45,7 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  ../Core/Inc/Circle.h ../Core/Inc/Stage.h ../Core/Inc/Rectangle.h \
  ../Core/Inc/StageObj.h ../Core/Inc/Circle.h ../Core/Inc/animacja2.h \
  ../Core/Inc/Line.h ../Core/Inc/Stage.h ../Core/Inc/animacja3.h \
- ../Core/Inc/StageObj.h ../Core/Inc/animacja4.h
+ ../Core/Inc/StageObj.h ../Core/Inc/animacja4.h ../Core/Inc/animacja5.h
 
 ../Core/Inc/main.h:
 
@@ -162,3 +162,5 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
 ../Core/Inc/StageObj.h:
 
 ../Core/Inc/animacja4.h:
+
+../Core/Inc/animacja5.h:

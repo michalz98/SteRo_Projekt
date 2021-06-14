@@ -29,6 +29,7 @@
 #include "animacja2.h"
 #include "animacja3.h"
 #include "animacja4.h"
+#include "animacja5.h"
 #include <cmath>
 /* USER CODE END Includes */
 
@@ -138,6 +139,8 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   stage->clear();
+  stgobj->r1=100;
+  stgobj->initFig();
   while (1)
   {
     /* USER CODE END WHILE */
@@ -146,7 +149,7 @@ int main(void)
 	  //================fallFig==================
 //	  stage->clear();
 //  	  BSP_LCD_Clear(LCD_COLOR_BLACK);
-//	  figFall(n,stage);
+//	  figFall(n,stage,stgobj);
 //	  n++;
 //	  stage->sendData();
 //	  HAL_Delay(1000);
@@ -175,13 +178,20 @@ int main(void)
 
 
 	  //============ball===================
-	  stage->clear();
-  	  BSP_LCD_Clear(LCD_COLOR_BLACK);
-	  ball(n,1,stage,stgobj);
-	  n++;
-	  stage->sendData();
-	  HAL_Delay(100);
+//	  stage->clear();
+//  	  BSP_LCD_Clear(LCD_COLOR_BLACK);
+//	  ball(n,1,stage,stgobj);
+//	  n++;
+//	  stage->sendData();
+//	  HAL_Delay(300);
 
+	  //============circles===================
+//	  stage->clear();
+//	  BSP_LCD_Clear(LCD_COLOR_BLACK);
+//	  circles(n, stage, stgobj);
+//	  n++;
+//	  stage->sendData();
+//	  HAL_Delay(100);
   }
   /* USER CODE END 3 */
 }

@@ -12,6 +12,7 @@
 
 void ball(int step, bool flag, Stage* stage, StageObj* stgobj)
 {
+	stgobj->ball=new Circle(stgobj->rb);
 
 	flag = 1;
 
@@ -19,22 +20,24 @@ void ball(int step, bool flag, Stage* stage, StageObj* stgobj)
 
 
 
-	if(stgobj->xb == stgobj->rb){
+	if(stgobj->xb < stgobj->rb){
 		stgobj->vxb = 1;
 	}
-	if(stgobj->xb == 239 - stgobj->rb){
+	if(stgobj->xb > 239 - stgobj->rb){
 		stgobj->vxb = -1;
 	}
 
-	if(stgobj->yb == stgobj->rb){
+	if(stgobj->yb < stgobj->rb){
 		stgobj->vyb = 1;
 	}
-	if(stgobj->yb == 319 - stgobj->rb){
+	if(stgobj->yb > 319 - stgobj->rb){
 		stgobj->vyb = -1;
 	}
 
 	stgobj->xb = stgobj->xb + step * stgobj->vxb;
 	stgobj->yb = stgobj->yb + step * stgobj->vyb;
+
+	delete(stgobj->ball);
 }
 
 
