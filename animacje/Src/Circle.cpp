@@ -33,20 +33,20 @@ void Circle::drawCircle(int x, int y)
             d +=  2*(x_t - y_t)+5;
         }
         if (x_t+x > 0 && x_t+x < 240 && y_t+y > 0 && y_t+y < 320)
-        	p[x_t+x][y_t+y] = 1;
+        	stage->p[x_t+x][y_t+y] = 1;
         if (x_t+x > 0 && x_t+x < 240 && -y_t+y > 0 && -y_t+y < 320)
-        	p[x_t+x][-y_t+y] = 1;
+        	stage->p[x_t+x][-y_t+y] = 1;
         if (-x_t+x > 0 && -x_t+x < 240 && y_t+y > 0 && y_t+y < 320)
-        	p[-x_t+x][y_t+y] = 1;
+        	stage->p[-x_t+x][y_t+y] = 1;
         if (-x_t+x > 0 && -x_t+x < 240 && -y_t+y > 0 && -y_t+y < 320)
-        	p[-x_t+x][-y_t+y] = 1;
+        	stage->p[-x_t+x][-y_t+y] = 1;
         if (x_t+x > 0 && x_t+x < 320 && y_t+y > 0 && y_t+y < 240)
         	p[y_t+x][x_t+y] = 1;
         if (-x_t+x > 0 && -x_t+x < 320 && y_t+y > 0 && y_t+y < 240)
-        	p[y_t+x][-x_t+y] = 1;
+        	stage->p[y_t+x][-x_t+y] = 1;
         if (x_t+x > 0 && x_t+x < 320 && -y_t+y > 0 && -y_t+y < 240)
-        	p[-y_t+x][x_t+y] = 1;
+        	stage->p[-y_t+x][x_t+y] = 1;
         if (-x_t+x > 0 && -x_t+x < 320 && -y_t+y > 0 && -y_t+y < 240)
-        	p[-y_t+x][-x_t+y] = 1;
+        	stage->p[-y_t+x][-x_t+y] = 1;
     }
 }
