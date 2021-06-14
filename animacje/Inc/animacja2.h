@@ -20,7 +20,7 @@ struct text{
 	int x1, x2, x3, x4;
 }t;
 
-void tekst(int y, bool state);
+void tekst(int y, bool state, Stage* stage);
 
 
 
