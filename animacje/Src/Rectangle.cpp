@@ -16,10 +16,10 @@ Rectangle::Rectangle(int w, int l)
 
 void Rectangle::drawRec(int x, int y, bool wypel)
 {
-	x1 = x - this->width/2;
-	x2 = x + this->width/2;
-	y1 = y - this->length/2;
-	y2 = y + this->length/2;
+	int x1 = x - this->width/2;
+	int x2 = x + this->width/2;
+	int y1 = y - this->length/2;
+	int y2 = y + this->length/2;
 
     for(int i=x1; i<=x2; i++)
     {
