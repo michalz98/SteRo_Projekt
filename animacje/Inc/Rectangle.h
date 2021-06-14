@@ -11,7 +11,7 @@
 #ifndef INC_RECTANGLE_HH_
 #define INC_RECTANGLE_HH_
 
-class Rectangle: public Stage{
+class Rectangle{
 	int width;
 	int length;
 private:

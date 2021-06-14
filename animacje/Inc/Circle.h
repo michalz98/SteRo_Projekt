@@ -4,7 +4,7 @@
 #include <Stage.h>
 #include <StageObj.h>
 
-class Circle:public Stage{
+class Circle{
 	int r;
 private:
 	Circle(int r);
