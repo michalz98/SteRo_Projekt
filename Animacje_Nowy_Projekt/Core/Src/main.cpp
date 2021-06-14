@@ -140,6 +140,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   stage->clear();
   stgobj->r1=100;
+  stgobj->w1=10;
+  stgobj->l1=20;
   stgobj->initFig();
   while (1)
   {
@@ -151,8 +153,9 @@ int main(void)
 //  	  BSP_LCD_Clear(LCD_COLOR_BLACK);
 //	  figFall(n,stage,stgobj);
 //	  n++;
+//  	  stgobj->rec1->drawRec(100, 100, 0, stage);
 //	  stage->sendData();
-//	  HAL_Delay(1000);
+//	  HAL_Delay(10);
 
 	  //================hipocycloid==================
 //	  for(int i=0; i<10; i++)
@@ -180,8 +183,7 @@ int main(void)
 	  //============ball===================
 //	  stage->clear();
 //  	  BSP_LCD_Clear(LCD_COLOR_BLACK);
-//	  ball(n,1,stage,stgobj);
-//	  n++;
+//	  ball(2,1,stage,stgobj);
 //	  stage->sendData();
 //	  HAL_Delay(300);
 

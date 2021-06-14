@@ -1,1 +1,1 @@
-animacja1.cpp:14:7:void figFall(int, Stage*, StageObj*)	40	static
+animacja1.cpp:13:7:void figFall(int, Stage*, StageObj*)	32	static
