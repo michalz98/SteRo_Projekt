@@ -11,7 +11,7 @@
 #include <time.h>
 
 
-//void  figFall(int step, Stage* stage)
+//void  figFall(int step, Stage* stage, StageObj* stgobj)
 //{
 //	srand (time(NULL));
 //
