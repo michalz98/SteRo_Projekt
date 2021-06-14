@@ -11,17 +11,17 @@ void circles(int step, Stage* stage, StageObj* stgobj)
 {
 	int x = 120, y= 160;
 
-	if(step%30 = 0 && stgobj->rw1 == 0){
-		stgobj->rw1 == 1;
+	if(step%30 == 0 && stgobj->rw1 == 0){
+		stgobj->rw1 = 1;
 	}
-	if(step%60 = 0 && stgobj->rw1 == 0){
-		stgobj->rw2 == 1;
+	if(step%60 == 0 && stgobj->rw1 == 0){
+		stgobj->rw2 = 1;
 	}
-	if(step%90 = 0 && stgobj->rw1 == 0){
-		stgobj->rw3 == 1;
+	if(step%90 == 0 && stgobj->rw1 == 0){
+		stgobj->rw3 = 1;
 	}
-	if(step%120 = 0 && stgobj->rw1 == 0){
-		stgobj->rw4 == 1;
+	if(step%120 == 0 && stgobj->rw1 == 0){
+		stgobj->rw4 = 1;
 	}
 
 	stgobj->wave1->drawCircle(x, y, stage);

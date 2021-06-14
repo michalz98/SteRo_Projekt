@@ -144,11 +144,13 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  //================fallFig==================
-	  stage->clear();
-  	  BSP_LCD_Clear(LCD_COLOR_BLACK);
-	  figFall(n,stage);
-	  n++;
-	  stage->sendData();
+//	  stage->clear();
+//  	  BSP_LCD_Clear(LCD_COLOR_BLACK);
+//	  figFall(n,stage);
+//	  n++;
+//	  stage->sendData();
+//	  HAL_Delay(1000);
+
 	  //================hipocycloid==================
 //	  for(int i=0; i<10; i++)
 //	  {
@@ -173,7 +175,13 @@ int main(void)
 
 
 	  //============ball===================
-	  //ball()
+	  stage->clear();
+  	  BSP_LCD_Clear(LCD_COLOR_BLACK);
+	  ball(n,1,stage,stgobj);
+	  n++;
+	  stage->sendData();
+	  HAL_Delay(100);
+
   }
   /* USER CODE END 3 */
 }

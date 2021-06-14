@@ -36,6 +36,4 @@ public:
 
 };
 
-static StageObj *stgobj;
-
 #endif /* INC_STAGEOBJ_H_ */
