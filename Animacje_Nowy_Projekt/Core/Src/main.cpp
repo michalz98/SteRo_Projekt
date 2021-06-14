@@ -93,7 +93,7 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 	Stage* stage = new Stage;
-	StageObj* stgobj = newStage;
+	StageObj* stgobj = new StageObj;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
