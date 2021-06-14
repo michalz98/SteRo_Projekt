@@ -10,11 +10,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-void ball(int step, bool flag, Stage* stage)
+void ball(int step, bool flag, Stage* stage, StageObj* stgobj)
 {
-	if(!flag){
-		stgobj->ball = new Circle(stgobj->xb, stgobj->yb, stgobj->rb);
-	}
 
 	flag = 1;
 
