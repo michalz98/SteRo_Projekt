@@ -7,7 +7,7 @@
 
 #include "animacja5.h"
 
-void circles(int step, Stage* stage)
+void circles(int step, Stage* stage, StageObj* stgobj)
 {
 	int x = 120, y= 160;
 
